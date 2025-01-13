@@ -61,6 +61,44 @@
             font-size: 0.9em;
             margin-top: 20px;
         }
+        .contact-section {
+            display: flex;
+            justify-content: space-between;
+            padding: 15px;
+            background-color: #ffffff;
+            margin-top: 20px;
+            border-radius: 8px;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        .contact-info {
+            flex: 1;
+            color: #333;
+        }
+        .contact-info ul {
+            list-style: none;
+            padding-left: 0;
+        }
+        .contact-info li {
+            margin-bottom: 10px;
+        }
+        .download-link {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+            justify-content: center;
+        }
+        .download-link a {
+            font-size: 1.2em;
+            background-color: #ff007f;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+            margin-top: 10px;
+        }
+        .download-link a:hover {
+            background-color: #d5006d;
+        }
     </style>
 </head>
 <body>
@@ -134,13 +172,18 @@
     <p>Die Galerie ist bald verfügbar – bleib gespannt und check regelmäßig nach neuen Bildern! <a href="https://KPunktFurry.de/Services">Zur Galerie (Coming Soon)</a></p>
 </section>
 
-<section class="note">
-    <p><strong>Kontakt:</strong></p>
-    <ul>
-        <li>E-Mail: <a href="mailto:service@callboy.kpunktfurry.de">service@callboy.kpunktfurry.de</a></li>
-        <li>Telefon: 01625748440</li>
-        <li>Telegram: <a href="https://t.me/KPunktFurry">@KPunktFurry</a></li>
-    </ul>
+<section class="contact-section">
+    <div class="contact-info">
+        <h3>📞 Kontakt</h3>
+        <ul>
+            <li>E-Mail: <a href="mailto:service@callboy.kpunktfurry.de">service@callboy.kpunktfurry.de</a></li>
+            <li>Telefon: 01625748440</li>
+            <li>Telegram: <a href="https://t.me/KPunktFurry">@KPunktFurry</a></li>
+        </ul>
+    </div>
+    <div class="download-link">
+        <a href="preisliste%20xD.docx" download="preisliste_xD.docx">Download Preisliste</a>
+    </div>
 </section>
 
 </body>
