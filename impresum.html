@@ -6,39 +6,71 @@
     <title>Impressum</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Arial', sans-serif;
             margin: 0;
             padding: 0;
             line-height: 1.6;
-            background-color: #f4f4f9;
+            background-color: #f7f9fc;
             color: #333;
         }
         header {
-            background-color: #ff007f;
+            background: linear-gradient(135deg, #ff007f, #ff4caf);
             color: white;
-            padding: 15px 20px;
             text-align: center;
+            padding: 40px 20px;
+        }
+        header h1 {
+            margin: 0;
+            font-size: 2.5em;
         }
         main {
+            max-width: 900px;
+            margin: 20px auto;
             padding: 20px;
-            margin: 0 auto;
-            max-width: 800px;
             background-color: white;
-            border-radius: 8px;
-            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 12px;
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
         }
-        h1 {
+        h2 {
             color: #ff007f;
+            border-bottom: 2px solid #ff007f;
+            padding-bottom: 5px;
+            margin-bottom: 15px;
         }
-        section {
-            margin-bottom: 20px;
+        p, ul {
+            margin-bottom: 15px;
+        }
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+        ul li {
+            margin-bottom: 10px;
+            padding-left: 20px;
+            position: relative;
+        }
+        ul li:before {
+            content: "•";
+            color: #ff007f;
+            position: absolute;
+            left: 0;
+            font-size: 1.2em;
         }
         a {
             color: #ff007f;
             text-decoration: none;
+            font-weight: bold;
         }
         a:hover {
             text-decoration: underline;
+        }
+        footer {
+            text-align: center;
+            padding: 15px;
+            background-color: #ff007f;
+            color: white;
+            margin-top: 20px;
+            font-size: 0.9em;
         }
     </style>
 </head>
@@ -120,6 +152,10 @@
         </p>
     </section>
 </main>
+
+<footer>
+    &copy; 2025 Kilian Arnold | Alle Rechte vorbehalten
+</footer>
 
 </body>
 </html>
