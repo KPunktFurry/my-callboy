@@ -60,29 +60,27 @@
     </footer>
 
     <script>
-        async function loadImages() {
-            try {
-                // Diese Funktion sollte serverseitig durch ein API-Endpunkt ersetzt werden.
-                // Beispiel: Du kannst ein JSON-Array mit Bildinformationen zurückgeben.
-                const response = await fetch('/api/get-images'); // Placeholder
-                const images = await response.json();
+        // Manuelle Definition der Bilder und ihrer Erstellungsdaten
+        const images = [
+            { filename: 'pictures/bild1.jpg', date: '2025-01-12T10:00:00Z', alt: 'Bild 1' },
+            { filename: 'pictures/bild2.jpg', date: '2025-01-10T15:00:00Z', alt: 'Bild 2' },
+            { filename: 'pictures/bild3.jpg', date: '2025-01-11T08:30:00Z', alt: 'Bild 3' },
+            { filename: 'pictures/bild4.jpg', date: '2025-01-09T12:45:00Z', alt: 'Bild 4' }
+        ];
 
-                // Bilder nach Erstellungsdatum sortieren
-                images.sort((a, b) => new Date(a.date) - new Date(b.date));
+        // Bilder nach Erstellungsdatum sortieren
+        images.sort((a, b) => new Date(a.date) - new Date(b.date));
 
-                const gallery = document.getElementById('gallery');
-                images.forEach(img => {
-                    const imgElement = document.createElement('img');
-                    imgElement.src = `pictures/${img.filename}`;
-                    imgElement.alt = img.alt || 'Bild';
-                    gallery.appendChild(imgElement);
-                });
-            } catch (error) {
-                console.error('Fehler beim Laden der Bilder:', error);
-            }
-        }
+        // Galerie-Container
+        const gallery = document.getElementById('gallery');
 
-        loadImages();
+        // Bilder in die Galerie einfügen
+        images.forEach(img => {
+            const imgElement = document.createElement('img');
+            imgElement.src = img.filename;
+            imgElement.alt = img.alt;
+            gallery.appendChild(imgElement);
+        });
     </script>
 </body>
 </html>
