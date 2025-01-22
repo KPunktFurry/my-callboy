@@ -1,37 +1,44 @@
 <!DOCTYPE html>
 <html lang="de">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Callboy Service - Preisliste</title>
+    <title>Callboy Service | Alles ist möglich</title>
     <style>
         body {
             font-family: Arial, sans-serif;
             background-color: #f0f0f0;
             margin: 0;
             padding: 0;
+            line-height: 1.6;
         }
+        
         header {
-            background-color: #ff007f;
+            background-color: #8bc34a;
             color: white;
             text-align: center;
             padding: 20px;
         }
+        
         header img {
             display: block;
-            margin: 30px auto 0; /* Zentriert das Bild und fügt oben Abstand hinzu */
-            width: 300px; /* Passe die Breite an */
-            max-width: 99%; /* Sorgt dafür, dass das Bild auf kleinen Bildschirmen nicht zu groß wird */
-            height: auto; /* Behält das Seitenverhältnis bei */
+            margin: 30px auto 0;
+            width: 300px;
+            max-width: 99%;
+            height: auto;
         }
+        
         h1 {
             font-size: 2.5em;
         }
+        
         .section-title {
             font-size: 1.8em;
-            color: #ff007f;
+            color: #8bc34a;
             margin-top: 20px;
         }
+        
         .service-description {
             background-color: white;
             padding: 15px;
@@ -39,30 +46,36 @@
             border-radius: 8px;
             box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
         }
+        
         .service-description h3 {
-            color: #d5006d;
+            color: #4caf50;
             margin-bottom: 10px;
         }
+        
         .service-description p {
             color: #333;
-            line-height: 1.6;
         }
+        
         .factor {
-            color: #ff007f;
+            color: #8bc34a;
             font-weight: bold;
         }
+        
         a {
-            color: #ff007f;
+            color: #8bc34a;
             text-decoration: none;
         }
+        
         a:hover {
             text-decoration: underline;
         }
+        
         .note {
             color: #555;
             font-size: 0.9em;
             margin-top: 20px;
         }
+        
         .contact-section {
             display: flex;
             justify-content: space-between;
@@ -72,126 +85,177 @@
             border-radius: 8px;
             box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
         }
+        
         .contact-info {
             flex: 1;
             color: #333;
         }
+        
         .contact-info ul {
             list-style: none;
             padding-left: 0;
         }
+        
         .contact-info li {
             margin-bottom: 10px;
         }
+        
         .download-link {
             display: flex;
             flex-direction: column;
             align-items: flex-end;
             justify-content: center;
         }
+        
         .download-link a {
             font-size: 1.2em;
-            background-color: #ff007f;
+            background-color: #8bc34a;
             color: white;
             padding: 10px 20px;
             border-radius: 5px;
             text-decoration: none;
             margin-top: 10px;
         }
+        
         .download-link a:hover {
-            background-color: #d5006d;
+            background-color: #4caf50;
+        }
+        
+        .gallery {
+            margin: 20px auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 10px;
+        }
+        
+        .gallery img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        
+        .exceptions {
+            color: #8bc34a;
+            font-weight: bold;
+        }
+        
+        footer {
+            text-align: center;
+            margin-top: 20px;
+            padding: 10px;
+            background-color: #8bc34a;
+            color: white;
+        }
+        
+        footer a {
+            color: white;
+            margin: 0 10px;
+        }
+        
+        footer a:hover {
+            text-decoration: underline;
         }
     </style>
 </head>
+
 <body>
 
-<header>
-    <h1>Preisliste für Callboy Service</h1>
-    <img src="pb.png" alt="Callboy Service Logo">
-</header>
+    <header>
+        <h1>Callboy Service | Alles ist möglich</h1>
+        <img src="pb.webp" alt="Callboy Service Logo">
+    </header>
 
-<section class="service-description">
-    <h3>📌 Dienstleistungspaket: Transparent - Flexibel - Individuell</h3>
-    <p>Hier findest du eine Übersicht über alle Dienstleistungen und die jeweiligen Preise. Du hast spezielle Wünsche? Kein Problem, frag einfach nach! Alles ist möglich, solange es deinen Vorlieben entspricht. 😉</p>
-</section>
+    <section class="service-description">
+        <h3>👨 Über mich</h3>
+        <p>Hey, ich bin dein persönlicher Callboy, der dir unvergessliche Momente bietet. Ob ein charmantes Dinner-Date, eine aufregende Nacht oder individuelle Wünsche – ich sorge dafür, dass es dir an nichts fehlt. Diskretion und Verlässlichkeit sind selbstverständlich.</p>
+    </section>
 
-<section class="service-description">
-    <h3>1. Basistarif (pro Stunde)</h3>
-    <p>Der Basistarif ist dein Ticket zu einer Zeit, die genau so heiß und intensiv wird, wie du es dir vorstellst. Egal, ob wir den Abend ruhig starten oder direkt zur Sache kommen – du wirst auf deine Kosten kommen!</p>
-    <ul>
-        <li><strong>Normal:</strong> 65 WindelUnits für jede Stunde (pro) – für alles, was in meiner Nähe passiert. Ob Ausstellung oder ein entspannter Spaziergang – ich begleite dich.</li>
-        <li><strong>Reiseservice:</strong> 78 WindelUnits für jede (pro) Stunde (zzgl. Reisekosten) – für Wochenendtrips oder Hotelbesuche. Du wählst das Budget, wir machen es möglich!</li>
-    </ul>
-</section>
+    <section class="service-description">
+        <h3>📋 Leistungen</h3>
+        <p>Meine Services decken ein breites Spektrum ab, von romantischen Begegnungen bis zu individuellen Fetisch-Wünschen. Alles ist maßgeschneidert auf deine Bedürfnisse – keine Anfrage ist zu groß oder zu klein!</p>
+    </section>
 
-<section class="service-description">
-    <h3>2. Fetisch-Dienstleistungen</h3>
-    <p>Fetische sind absolut normal und können aufregend sein! Jede Dienstleistung wird individuell auf dich abgestimmt. Frag nach, falls du spezielle Wünsche hast.</p>
-    <ul>
-        <li><strong>Bondage:</strong> Faktor 1,12 – Kleine Fesselspiele für den besonderen Kick. 🖤</li>
-        <li><strong>Slave:</strong> Faktor 1,25 – Die Kontrolle abgeben und Vertrauen aufbauen. 🔥</li>
-        <li><strong>Roleplay:</strong> Faktor 1,3-1,5 – Fantasien in Rollen lebendig machen. 😏</li>
-        <li><strong>Domination/Submission (light):</strong> Faktor 1,25 – Sanfte Einführung in die Kunst der Dominanz. 😈</li>
-        <li><strong>Latex:</strong> Faktor 1,5 – Der Reiz von glänzendem Latex auf der Haut. 💥</li>
-        <li><strong>Füße:</strong> Faktor 75,2 – Für alle, die die Leidenschaft für Füße teilen. 👣</li>
-    </ul>
-</section>
-
-<section class="service-description">
-    <h3>3. Preisberechnung: Einfach & Transparent</h3>
-    <p>Die Preise berechnen sich durch Multiplikation des Basistarifs mit verschiedenen Faktoren.</p>
-    <ul>
-        <li><strong>Zeitrahmen:</strong> Bis 2 Stunden: Faktor 1,2 | Ab 3 Stunden: Faktor 1,4 | Ab 6 Stunden: Faktor 1,7</li>
-        <li><strong>Alter des Kunden:</strong> 18-24 Jahre: Faktor 1 | 25-29 Jahre: Faktor 1,25 | 50 Jahre und älter: Faktor 5,2</li>
-        <li><strong>Art der Dienstleistung:</strong> Normal: Faktor 1 | Fetisch: Faktor 1,2-2</li>
-    </ul>
-</section>
-
-<section class="service-description">
-    <h3>4. Zusätzliche Faktoren</h3>
-    <ul>
-        <li><strong>Reservierungen:</strong> Faktor 1,025 – Für vorzeitige Reservierungen.</li>
-        <li><strong>Hausbesuche:</strong> Faktor 0,95 – Rabatt für Besuche bei dir zuhause.</li>
-    </ul>
-</section>
-
-<section class="service-description">
-    <h3>5. Diskretion: Deine Privatsphäre ist mir heilig</h3>
-    <p>Deine Privatsphäre ist mir wichtig – wähle aus verschiedenen Diskretionsoptionen, um sicherzustellen, dass alles in absoluter Vertraulichkeit bleibt.</p>
-    <ul>
-        <li><strong>Anonyme Buchung & Zahlung per Bitcoin:</strong> +25 WindelUnits</li>
-        <li><strong>Premium-Diskretion:</strong> +75 WindelUnits – alle Daten werden nach dem Treffen vernichtet.</li>
-
-        <li><strong>eine WindelUnit:</strong> mindestens 2,5 Erwachsen Windeln der Größe SM die min. 1L aufnimmt</li>
-        <li><strong>tippn:</strong> schöne windeln, da reicht auch 1,5!</li>
-    </ul>
-</section>
-
-<section class="service-description">
-    <h3>6. Weitere Informationen</h3>
-    <p>Für spezielle Accessoires oder Wünsche stehe ich gerne zur Verfügung – alles wird individuell nach Absprache organisiert.</p>
-</section>
-
-<section class="service-description">
-    <h3>7. Galerie (Coming Soon)</h3>
-    <p>Die Galerie ist bald verfügbar – bleib gespannt und check regelmäßig nach neuen Bildern! <a href="galarie.html">Zur Galerie (Coming Soon)</a></p>
-</section>
-
-<section class="contact-section">
-    <div class="contact-info">
-        <h3>📞 Kontakt</h3>
+    <!-- Neue Dienstleistungen -->
+    <section class="service-description">
+        <h3>🌟 Neue Dienstleistungen</h3>
         <ul>
-            <li>E-Mail: <a href="mailto:service@callboy.kpunktfurry.de">service@callboy.kpunktfurry.de</a></li>
-            <li>Telefon: 01625748440</li>
-            <li>Telegram: <a href="https://t.me/KPunktFurry">@KPunktFurry</a></li>
+            <li><strong>Dinner Dates:</strong> Stilvoller Begleitservice mit romantischem Flair.</li>
+            <li><strong>Fotografie-Sessions:</strong> Erotische Fotoshootings für unvergessliche Erinnerungen.</li>
+            <li><strong>Virtuelle Dienste:</strong> Videoanrufe oder Textchats für diskrete Erlebnisse.</li>
         </ul>
-    </div>
-    <div class="download-link">
-        <a href="preisliste%20xD.docx" download="preisliste_xD.docx">Download Preisliste</a>
-    </div>
-</section>
+    </section>
 
+    <!-- Themenbasierte Pakete -->
+    <section class="service-description">
+        <h3>🎭 Themenbasierte Pakete</h3>
+        <p>Individuell gestaltete Erlebnisse, die perfekt zu dir passen:</p>
+        <ul>
+            <li><strong>Romantische Nacht:</strong> Ein Abend voller Zweisamkeit und Leidenschaft.
+                <img src="romantische_nacht.jpg" alt="Romantische Nacht" style="width:100%; max-width:400px; margin-top:10px; border-radius:8px;">
+            </li>
+            <li><strong>Abenteuerlust:</strong> Spannende und aufregende Erlebnisse für Adrenalinjunkies.
+                <img src="abenteuerlust.jpg" alt="Abenteuerlust Paket" style="width:100%; max-width:400px; margin-top:10px; border-radius:8px;">
+            </li>
+            <li><strong>Luxuserlebnis:</strong> Ein exklusives Date mit Stil und Eleganz.
+                <img src="luxuserlebnis.jpg" alt="Luxuserlebnis Paket" style="width:100%; max-width:400px; margin-top:10px; border-radius:8px;">
+            </li>
+        </ul>
+    </section>
+
+    <!-- Blog -->
+    <section class="service-description">
+        <h3>📝 Blog</h3>
+        <p>Entdecke spannende Artikel mit Tipps und Geschichten rund um Dates, Erotik und zwischenmenschliche Beziehungen. Schau vorbei und lass dich inspirieren!</p>
+    </section>
+
+    <section class="service-description">
+        <h3>💰 Preise</h3>
+        <p>Transparenz ist mir wichtig. Alle Preise sind fair kalkuliert und richten sich nach Dauer, Art der Dienstleistung und eventuellen Extras. Schau dir die Preisliste an oder kontaktiere mich direkt für ein individuelles Angebot!</p>
+    </section>
+
+    <!-- Galerie -->
+    <section class="gallery">
+        <img src="bild1.png" alt="Professionelles Portrait eines Callboys">
+        <img src="bild2.png" alt="Eleganter Callboy im Anzug">
+        <img src="bild3.png" alt="Entspanntes Callboy-Erlebnis am Strand">
+    </section>
+
+    <!-- Kontakt -->
+    <section class="contact-section">
+        <div class="contact-info">
+            <h3>📞 Kontakt</h3>
+            <ul>
+                <li>E-Mail: <a href="mailto:service@callboy.kpunktfurry.de">service@callboy.kpunktfurry.de</a></li>
+                <li>Telefon: 01625748440</li>
+                <li>Telegram: <a href="https://t.me/KPunktFurry">@KPunktFurry</a></li>
+            </ul>
+        </div>
+        <div class="download-link">
+            <a href="preisliste%20xD.docx" download="preisliste_xD.docx">Download Preisliste</a>
+        </div>
+    </section>
+
+    <!-- Ausnahmen -->
+    <section class="service-description">
+        <h3>4. Ausnahmen</h3>
+        <p class="exceptions">Kein Angebot umfasst illegale Tätigkeiten, Gewalt oder jegliche Aktivitäten, die gegen den gegenseitigen Respekt verstoßen.</p>
+    </section>
+
+    <footer>
+        <a href="impresum.html">Impressum</a>
+        <a href="galarie.html">Zur Galerie</a>
+    </footer>
+
+    <section class="service-description">
+        <h3>❓ FAQ</h3>
+        <ul>
+            <li><strong>Wie diskret ist dein Service?</strong> – Absolut diskret! Dein Wohlbefinden und deine Privatsphäre stehen an erster Stelle.</li>
+            <li><strong>Bietest du Hausbesuche an?</strong> – Ja, innerhalb eines bestimmten Radius und nach Absprache.</li>
+            <li><strong>Kann ich Sonderwünsche äußern?</strong> – Unbedingt! Schreib mir einfach, und wir klären die Details.</li>
+        </ul>
+    </section>
+    <strong>die seite ist im umbau!</strong>
 </body>
+
 </html>
-info: all diese angebote sind freibleibend
-<a href="impresum.html">Impresum</a>
