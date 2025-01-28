@@ -4,65 +4,77 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Callboy Service | Alles ist möglich</title>
+    <title>Callboy Service | Individuelle Videos & Fotos</title>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+    </script>
+    <script type="text/javascript">
+        (function() {
+            emailjs.init({
+                publicKey: "N8H7vnzZsugqU1mOU",
+            });
+        })();
+    </script>
     <style>
         body {
             font-family: Arial, sans-serif;
-            background-color: #f0f0f0;
+            background-color: #f8f9fa;
             margin: 0;
             padding: 0;
             line-height: 1.6;
         }
         
         header {
-            background-color: #8bc34a;
+            background-color: #6c757d;
             color: white;
             text-align: center;
-            padding: 20px;
+            padding: 30px 10px;
         }
         
         header img {
             display: block;
-            margin: 30px auto 0;
-            width: 300px;
-            max-width: 99%;
+            margin: 20px auto 10px;
+            width: 200px;
             height: auto;
         }
         
         h1 {
             font-size: 2.5em;
+            margin-bottom: 10px;
         }
         
-        .section-title {
-            font-size: 1.8em;
-            color: #8bc34a;
-            margin-top: 20px;
+        h2,
+        h3 {
+            color: #6c757d;
         }
         
-        .service-description {
+        .section {
             background-color: white;
-            padding: 15px;
-            margin: 10px;
+            margin: 20px auto;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+            max-width: 800px;
+        }
+        
+        .section p {
+            color: #333;
+        }
+        
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 15px;
+            padding: 20px;
+        }
+        
+        .gallery img {
+            width: 100%;
             border-radius: 8px;
             box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
         }
         
-        .service-description h3 {
-            color: #4caf50;
-            margin-bottom: 10px;
-        }
-        
-        .service-description p {
-            color: #333;
-        }
-        
-        .factor {
-            color: #8bc34a;
-            font-weight: bold;
-        }
-        
         a {
-            color: #8bc34a;
+            color: #6c757d;
             text-decoration: none;
         }
         
@@ -70,81 +82,47 @@
             text-decoration: underline;
         }
         
-        .note {
-            color: #555;
-            font-size: 0.9em;
-            margin-top: 20px;
-        }
-        
-        .contact-section {
-            display: flex;
-            justify-content: space-between;
-            padding: 15px;
-            background-color: #ffffff;
-            margin-top: 20px;
-            border-radius: 8px;
+        .form-container {
+            padding: 20px;
+            background-color: white;
+            border-radius: 10px;
             box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-        }
-        
-        .contact-info {
-            flex: 1;
-            color: #333;
-        }
-        
-        .contact-info ul {
-            list-style: none;
-            padding-left: 0;
-        }
-        
-        .contact-info li {
-            margin-bottom: 10px;
-        }
-        
-        .download-link {
-            display: flex;
-            flex-direction: column;
-            align-items: flex-end;
-            justify-content: center;
-        }
-        
-        .download-link a {
-            font-size: 1.2em;
-            background-color: #8bc34a;
-            color: white;
-            padding: 10px 20px;
-            border-radius: 5px;
-            text-decoration: none;
-            margin-top: 10px;
-        }
-        
-        .download-link a:hover {
-            background-color: #4caf50;
-        }
-        
-        .gallery {
+            max-width: 800px;
             margin: 20px auto;
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-            gap: 10px;
         }
         
-        .gallery img {
-            width: 100%;
-            height: auto;
-            border-radius: 8px;
-            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-        }
-        
-        .exceptions {
-            color: #8bc34a;
+        .form-container label {
+            display: block;
+            margin: 10px 0 5px;
             font-weight: bold;
+        }
+        
+        .form-container input,
+        .form-container textarea,
+        .form-container button {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+        
+        .form-container button {
+            background-color: #6c757d;
+            color: white;
+            font-size: 1em;
+            border: none;
+        }
+        
+        .form-container button:hover {
+            background-color: #495057;
         }
         
         footer {
             text-align: center;
-            margin-top: 20px;
-            padding: 10px;
-            background-color: #8bc34a;
+            padding: 20px;
+            background-color: #6c757d;
             color: white;
         }
         
@@ -156,106 +134,120 @@
         footer a:hover {
             text-decoration: underline;
         }
+        
+        .tip {
+            background-color: #e9ecef;
+            border-left: 5px solid #6c757d;
+            padding: 10px;
+            margin: 15px 0;
+            border-radius: 5px;
+        }
+        
+        .tip strong {
+            color: #6c757d;
+        }
     </style>
 </head>
 
 <body>
 
     <header>
-        <h1>Callboy Service | Alles ist möglich</h1>
+        <h1>Callboy Service | Individuelle Erlebnisse</h1>
         <img src="pb.webp" alt="Callboy Service Logo">
     </header>
 
-    <section class="service-description">
-        <h3>👨 Über mich</h3>
-        <p>Hey, ich bin dein persönlicher Callboy, der dir unvergessliche Momente bietet. Ob ein charmantes Dinner-Date, eine aufregende Nacht oder individuelle Wünsche – ich sorge dafür, dass es dir an nichts fehlt. Diskretion und Verlässlichkeit sind selbstverständlich.</p>
+    <section class="section">
+        <h2>🎁 Deine Idee, meine Umsetzung</h2>
+        <p>Du möchtest ein einzigartiges Erlebnis in Form eines personalisierten Videos oder Fotos erhalten? Schicke mir ein Objekt, ein Kleidungsstück oder etwas anderes Besonderes – ich probiere es für dich aus und halte es in einem hochwertigen Video
+            oder Foto fest. Jedes Paket wird mit Liebe und Kreativität umgesetzt, und deine Wünsche stehen im Fokus.</p>
     </section>
 
-    <section class="service-description">
-        <h3>📋 Leistungen</h3>
-        <p>Meine Services decken ein breites Spektrum ab, von romantischen Begegnungen bis zu individuellen Fetisch-Wünschen. Alles ist maßgeschneidert auf deine Bedürfnisse – keine Anfrage ist zu groß oder zu klein!</p>
-    </section>
-
-    <!-- Neue Dienstleistungen -->
-    <section class="service-description">
-        <h3>🌟 Neue Dienstleistungen</h3>
+    <section class="section">
+        <h2>💳 Preise</h2>
+        <p>Die Preise variieren je nach Umfang des Projekts und der gewünschten Medien. Eine einfache Übersicht:</p>
         <ul>
-            <li><strong>Dinner Dates:</strong> Stilvoller Begleitservice mit romantischem Flair.</li>
-            <li><strong>Fotografie-Sessions:</strong> Erotische Fotoshootings für unvergessliche Erinnerungen.</li>
-            <li><strong>Virtuelle Dienste:</strong> Videoanrufe oder Textchats für diskrete Erlebnisse.</li>
+            <li><strong>Video:</strong> ab 50 EUR</li>
+            <li><strong>Foto-Set:</strong> ab 30 EUR</li>
+            <li><strong>nur das zusenden:</strong> kosten frei!</li>
+            <li><strong>Individuelle Wünsche:</strong> Preis auf Anfrage</li>
         </ul>
-    </section>
-
-    <!-- Themenbasierte Pakete -->
-    <section class="service-description">
-        <h3>🎭 Themenbasierte Pakete</h3>
-        <p>Individuell gestaltete Erlebnisse, die perfekt zu dir passen:</p>
-        <ul>
-            <li><strong>Romantische Nacht:</strong> Ein Abend voller Zweisamkeit und Leidenschaft.
-                <img src="romantische_nacht.jpg" alt="Romantische Nacht" style="width:100%; max-width:400px; margin-top:10px; border-radius:8px;">
-            </li>
-            <li><strong>Abenteuerlust:</strong> Spannende und aufregende Erlebnisse für Adrenalinjunkies.
-                <img src="abenteuerlust.jpg" alt="Abenteuerlust Paket" style="width:100%; max-width:400px; margin-top:10px; border-radius:8px;">
-            </li>
-            <li><strong>Luxuserlebnis:</strong> Ein exklusives Date mit Stil und Eleganz.
-                <img src="luxuserlebnis.jpg" alt="Luxuserlebnis Paket" style="width:100%; max-width:400px; margin-top:10px; border-radius:8px;">
-            </li>
-        </ul>
-    </section>
-
-    <!-- Blog -->
-    <section class="service-description">
-        <h3>📝 Blog</h3>
-        <p>Entdecke spannende Artikel mit Tipps und Geschichten rund um Dates, Erotik und zwischenmenschliche Beziehungen. Schau vorbei und lass dich inspirieren!</p>
-    </section>
-
-    <section class="service-description">
-        <h3>💰 Preise</h3>
-        <p>Transparenz ist mir wichtig. Alle Preise sind fair kalkuliert und richten sich nach Dauer, Art der Dienstleistung und eventuellen Extras. Schau dir die Preisliste an oder kontaktiere mich direkt für ein individuelles Angebot!</p>
-    </section>
-
-    <!-- Galerie -->
-    <section class="gallery">
-        <img src="bild1.png" alt="Professionelles Portrait eines Callboys">
-        <img src="bild2.png" alt="Eleganter Callboy im Anzug">
-        <img src="bild3.png" alt="Entspanntes Callboy-Erlebnis am Strand">
-    </section>
-
-    <!-- Kontakt -->
-    <section class="contact-section">
-        <div class="contact-info">
-            <h3>📞 Kontakt</h3>
-            <ul>
-                <li>E-Mail: <a href="mailto:service@callboy.kpunktfurry.de">service@callboy.kpunktfurry.de</a></li>
-                <li>Telefon: 01625748440</li>
-                <li>Telegram: <a href="https://t.me/KPunktFurry">@KPunktFurry</a></li>
-            </ul>
-        </div>
-        <div class="download-link">
-            <a href="preisliste%20xD.docx" download="preisliste_xD.docx">Download Preisliste</a>
+        <div class="tip">
+            <strong>💡 Tipp:</strong> Du kannst deine Zahlung auch diskret in einem Briefumschlag mit dem Paket verschicken und einfach keinen Absender angeben.
         </div>
     </section>
 
-    <!-- Ausnahmen -->
-    <section class="service-description">
-        <h3>4. Ausnahmen</h3>
-        <p class="exceptions">Kein Angebot umfasst illegale Tätigkeiten, Gewalt oder jegliche Aktivitäten, die gegen den gegenseitigen Respekt verstoßen.</p>
+    <section class="section">
+        <h2>🖼️ Galerie</h2>
+        <p>Entdecke frühere Projekte und lass dich inspirieren:</p>
+        <div class="gallery">
+            <img src="1.png" alt="Beispiel 1">
+            <img src="2.jpg" alt="Beispiel 2">
+            <img src="3.jpg" alt="Beispiel 3">
+        </div>
+        <p><a href="galarie.html">Zur Galerie</a></p>
+    </section>
+
+    <section class="form-container">
+        <h2>📧 Info & Anfrage</h2>
+        <form id="requestForm">
+            <label for="name">Dein Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">E-Mail-Adresse:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="message">Deine Nachricht oder Anfrage:</label>
+            <textarea id="message" name="message" rows="5" required></textarea>
+
+            <button type="submit">Anfrage senden</button>
+        </form>
+
+        <script>
+            // EmailJS initialisieren
+            (function() {
+                emailjs.init("N8H7vnzZsugqU1mOU"); // Ersetze "YOUR_API_KEY" mit deinem tatsächlichen API-Key
+            })();
+
+            // Formular-Submit-Handler
+            const form = document.getElementById("requestForm");
+            form.addEventListener("submit", function(e) {
+                e.preventDefault();
+
+                // Formulardaten als Objekt
+                const formData = new FormData(form);
+                const data = {
+                    name: formData.get("name"),
+                    email: formData.get("email"),
+                    message: formData.get("message")
+                };
+
+                // E-Mail an EmailJS senden
+                emailjs.send('service_sozld5i', 'template_vt4ldrl', data)
+                    .then(function(response) {
+                        alert("Nachricht erfolgreich gesendet!");
+                        form.reset(); // Formular nach dem Absenden zurücksetzen
+                    }, function(error) {
+                        alert("Es gab einen Fehler: " + JSON.stringify(error));
+                    });
+            });
+        </script>
+    </section>
+
+    <section class="section">
+        <h2>📦 Poststation</h2>
+        <p>Wenn du möchtest, dass dein Paket an eine Poststation geschickt wird, gib bitte folgende Informationen mit an:</p>
+        <ul>
+            <li><strong>Name der Poststation:</strong> (z. B. Packstation 123)</li>
+            <li><strong>Kundennummer:</strong> (falls erforderlich)</li>
+            <li><strong>Adresse:</strong> (Straße, PLZ, Stadt)</li>
+        </ul>
+        <p>Diese Details kannst du direkt in deiner Anfrage oder mit deinem Paket mitschicken.</p>
     </section>
 
     <footer>
         <a href="impresum.html">Impressum</a>
         <a href="galarie.html">Zur Galerie</a>
     </footer>
-
-    <section class="service-description">
-        <h3>❓ FAQ</h3>
-        <ul>
-            <li><strong>Wie diskret ist dein Service?</strong> – Absolut diskret! Dein Wohlbefinden und deine Privatsphäre stehen an erster Stelle.</li>
-            <li><strong>Bietest du Hausbesuche an?</strong> – Ja, innerhalb eines bestimmten Radius und nach Absprache.</li>
-            <li><strong>Kann ich Sonderwünsche äußern?</strong> – Unbedingt! Schreib mir einfach, und wir klären die Details.</li>
-        </ul>
-    </section>
-    <strong>die seite ist im umbau!</strong>
 </body>
 
 </html>
