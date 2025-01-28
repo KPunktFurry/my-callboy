@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Schöne Galerie</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f4f8;
+            color: #4a4a4a;
+            line-height: 1.6;
+        }
+        
+        header {
+            background-color: #ff5722;
+            color: white;
+            text-align: center;
+            padding: 40px;
+            box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.2);
+        }
+        
+        header h1 {
+            font-size: 3em;
+            margin: 0;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            font-weight: bold;
+        }
+        
+        header p {
+            font-size: 1.2em;
+            margin-top: 10px;
+            font-style: italic;
+        }
+        
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            /* 3 Bilder pro Zeile */
+            gap: 30px;
+            padding: 40px;
+            justify-items: center;
+            align-items: center;
+            margin-top: 60px;
+        }
+        
+        .gallery img {
+            width: 100%;
+            height: auto;
+            border-radius: 15px;
+            box-shadow: 0px 12px 35px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+            border: 8px solid #ffffff;
+        }
+        
+        .gallery img:hover {
+            transform: scale(1.1);
+            box-shadow: 0px 15px 45px rgba(0, 0, 0, 0.2);
+        }
+        
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #212121;
+            color: white;
+            font-size: 1em;
+        }
+        
+        footer a {
+            color: #ff5722;
+            text-decoration: none;
+            font-weight: bold;
+            margin: 0 10px;
+        }
+        
+        footer a:hover {
+            text-decoration: underline;
+        }
+        
+        @media (max-width: 768px) {
+            .gallery {
+                grid-template-columns: repeat(2, 1fr);
+                /* 2 Bilder pro Zeile bei kleineren Bildschirmen */
+                gap: 20px;
+                padding: 20px;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .gallery {
+                grid-template-columns: 1fr;
+                /* 1 Bild pro Zeile bei sehr kleinen Bildschirmen */
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Schöne Galerie</h1>
+        <p>Entdecke meine kreativsten Werke</p>
+    </header>
+
+    <div class="gallery" id="gallery">
+        <!-- Bilder werden hier eingefügt -->
+    </div>
+
+    <footer>
+        &copy; 2025 Schöne Galerie | Alle Rechte vorbehalten | <a href="#">Impressum</a>
+    </footer>
+
+    <script>
+        // Hier kannst du die Dateinamen der Bilder anpassen
+        const imageFilenames = [
+            '1', // Bild 1
+            '2', // Bild 2
+            '3', // Bild 3
+            '4', // Bild 4
+            '5', // Bild 5
+            '6', // Bild 6
+            '7', // Bild 7
+            '8', // Bild 8
+            '9' // Bild 9
+        ];
+
+        // Galerie-Container
+        const gallery = document.getElementById('gallery');
+
+        // Durchlaufe das Array und füge jedes Bild in die Galerie ein
+        imageFilenames.forEach(filename => {
+            const imgElement = document.createElement('img');
+            imgElement.src = `pictures/${filename}.jpg`; // Annahme: Bilder liegen im Ordner "pictures"
+            imgElement.alt = `Bild ${filename}`;
+            gallery.appendChild(imgElement);
+        });
+    </script>
+</body>
+
+</html>
